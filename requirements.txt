@@ -4,4 +4,3 @@ pandas
 seaborn
 koreanize_matplotlib
 matplotlib
-libtk8.6
