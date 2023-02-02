@@ -43,116 +43,116 @@ df = df.reset_index(drop=True)
 
 
 # 컨텐츠 구조 만들기
-from tkinter.tix import COLUMN
-from pyparsing import empty
+# # from tkinter.tix import COLUMN
+# from pyparsing import empty
 
-st.set_page_config(layout="wide")
-empty1,con1,empty2 = st.columns([0.2,1.0,0.2])
-empty1,con2,empty2 = st.columns([0.2,1.0,0.2])
-empty1,con3,con4,empty2 = st.columns([0.1,0.5,0.5,0.1])
-empty1,con5,con6,empty2 = st.columns([0.1,0.5,0.5,0.1])
-empty1,con7,empty2 = st.columns([0.1,1.0,0.1])
+# st.set_page_config(layout="wide")
+# empty1,con1,empty2 = st.columns([0.2,1.0,0.2])
+# empty1,con2,empty2 = st.columns([0.2,1.0,0.2])
+# empty1,con3,con4,empty2 = st.columns([0.1,0.5,0.5,0.1])
+# empty1,con5,con6,empty2 = st.columns([0.1,0.5,0.5,0.1])
+# empty1,con7,empty2 = st.columns([0.1,1.0,0.1])
 
 
-def main():
-    with empty1:
-        empty()
+# def main():
+#     with empty1:
+#         empty()
         
-    with con1:
-        st.title('사이버 범죄 예방을 위한 데이터 시각화')
-        st.subheader('동국대X네이버 부스트코스 4팀')
-        st.title('\n')
-        st.title('\n')
+#     with con1:
+#         st.title('사이버 범죄 예방을 위한 데이터 시각화')
+#         st.subheader('동국대X네이버 부스트코스 4팀')
+#         st.title('\n')
+#         st.title('\n')
         
         
-    with con2:
-        image = Image.open('전화금융사기워드클라우드.png')
-        st.image(image, width = 600 ,caption='\'전화금융사기\'를 키워드로 크롤링한 네이버 뉴스 기사의 워드클라우드')
-        st.title('\n')
-        st.title('\n')
+#     with con2:
+#         image = Image.open('전화금융사기워드클라우드.png')
+#         st.image(image, width = 600 ,caption='\'전화금융사기\'를 키워드로 크롤링한 네이버 뉴스 기사의 워드클라우드')
+#         st.title('\n')
+#         st.title('\n')
 
         
-    with con3:
-        st.subheader("지역별로 살펴보는 \n")
-        st.subheader("전화금융사기 데이터")
+#     with con3:
+#         st.subheader("지역별로 살펴보는 \n")
+#         st.subheader("전화금융사기 데이터")
 
-        tab1, tab2, tab3, tab4, tab5, tab6,tab7, tab8 ,tab9= st.tabs(['시도별 전화사기 건수',"경기도", "서울특별시", "경상남도","경상북도","전라북도",'전라남도','충청남도','강원도'])
+#         tab1, tab2, tab3, tab4, tab5, tab6,tab7, tab8 ,tab9= st.tabs(['시도별 전화사기 건수',"경기도", "서울특별시", "경상남도","경상북도","전라북도",'전라남도','충청남도','강원도'])
 
 
-        with tab1:
-            st.header("시도별 전화사기 건수")
-            fig = plt.figure(figsize=(10, 4))
-            sns.countplot(y="시도", data=df, order = df["시도"].value_counts().index)
-            st.pyplot(fig)
+#         with tab1:
+#             st.header("시도별 전화사기 건수")
+#             fig = plt.figure(figsize=(10, 4))
+#             sns.countplot(y="시도", data=df, order = df["시도"].value_counts().index)
+#             st.pyplot(fig)
             
             
-        with tab2:
-            st.header("경기도 - 시군구별 전화사기 건수")
-            fig = plt.figure(figsize=(10, 10))
-            sns.countplot(y="시군구", data=df[df["시도"]=='경기도'],order = df[df["시도"]=='경기도']["시군구"].value_counts().index)
-            st.pyplot(fig)
+#         with tab2:
+#             st.header("경기도 - 시군구별 전화사기 건수")
+#             fig = plt.figure(figsize=(10, 10))
+#             sns.countplot(y="시군구", data=df[df["시도"]=='경기도'],order = df[df["시도"]=='경기도']["시군구"].value_counts().index)
+#             st.pyplot(fig)
 
 
-        with tab3:
-            st.header("서울특별시 - 시군구별 전화사기 건수")
-            fig = plt.figure(figsize=(10, 10))
-            sns.countplot(y="시군구", data=df[df["시도"]=='서울특별시'],order = df[df["시도"]=='서울특별시']["시군구"].value_counts().index)
-            st.pyplot(fig)
+#         with tab3:
+#             st.header("서울특별시 - 시군구별 전화사기 건수")
+#             fig = plt.figure(figsize=(10, 10))
+#             sns.countplot(y="시군구", data=df[df["시도"]=='서울특별시'],order = df[df["시도"]=='서울특별시']["시군구"].value_counts().index)
+#             st.pyplot(fig)
 
-        with tab4:
-            st.header("경상남도 - 시군구별 전화사기 건수")
-            fig = plt.figure(figsize=(10, 10))
-            sns.countplot(y="시군구", data=df[df["시도"]=='경상남도'],order = df[df["시도"]=='경상남도']["시군구"].value_counts().index)
-            st.pyplot(fig)
+#         with tab4:
+#             st.header("경상남도 - 시군구별 전화사기 건수")
+#             fig = plt.figure(figsize=(10, 10))
+#             sns.countplot(y="시군구", data=df[df["시도"]=='경상남도'],order = df[df["시도"]=='경상남도']["시군구"].value_counts().index)
+#             st.pyplot(fig)
 
-        with tab5:
-            st.header("경상북도 - 시군구별 전화사기 건수")
-            fig = plt.figure(figsize=(10, 10))
-            sns.countplot(y="시군구", data=df[df["시도"]=='경상북도'],order = df[df["시도"]=='경상북도']["시군구"].value_counts().index)
-            st.pyplot(fig)
+#         with tab5:
+#             st.header("경상북도 - 시군구별 전화사기 건수")
+#             fig = plt.figure(figsize=(10, 10))
+#             sns.countplot(y="시군구", data=df[df["시도"]=='경상북도'],order = df[df["시도"]=='경상북도']["시군구"].value_counts().index)
+#             st.pyplot(fig)
             
-        with tab6:
-            st.header("전라북도 - 시군구별 전화사기 건수")
-            fig = plt.figure(figsize=(10, 10))
-            sns.countplot(y="시군구", data=df[df["시도"]=='전라북도'],order = df[df["시도"]=='전라북도']["시군구"].value_counts().index)
-            st.pyplot(fig)
+#         with tab6:
+#             st.header("전라북도 - 시군구별 전화사기 건수")
+#             fig = plt.figure(figsize=(10, 10))
+#             sns.countplot(y="시군구", data=df[df["시도"]=='전라북도'],order = df[df["시도"]=='전라북도']["시군구"].value_counts().index)
+#             st.pyplot(fig)
             
-        with tab7:
-            st.header("전라남도 - 시군구별 전화사기 건수")
-            fig = plt.figure(figsize=(10, 10))
-            sns.countplot(y="시군구", data=df[df["시도"]=='전라남도'],order = df[df["시도"]=='전라남도']["시군구"].value_counts().index)
-            st.pyplot(fig)
+#         with tab7:
+#             st.header("전라남도 - 시군구별 전화사기 건수")
+#             fig = plt.figure(figsize=(10, 10))
+#             sns.countplot(y="시군구", data=df[df["시도"]=='전라남도'],order = df[df["시도"]=='전라남도']["시군구"].value_counts().index)
+#             st.pyplot(fig)
             
-        with tab8:
-            st.header("충청남도 - 시군구별 전화사기 건수")
-            fig = plt.figure(figsize=(10, 10))
-            sns.countplot(y="시군구", data=df[df["시도"]=='충청남도'],order = df[df["시도"]=='충청남도']["시군구"].value_counts().index)
-            st.pyplot(fig)
+#         with tab8:
+#             st.header("충청남도 - 시군구별 전화사기 건수")
+#             fig = plt.figure(figsize=(10, 10))
+#             sns.countplot(y="시군구", data=df[df["시도"]=='충청남도'],order = df[df["시도"]=='충청남도']["시군구"].value_counts().index)
+#             st.pyplot(fig)
             
-        with tab9:
-            st.header("강원도 - 시군구별 전화사기 건수")
-            fig = plt.figure(figsize=(10, 10))
-            sns.countplot(y="시군구", data=df[df["시도"]=='강원도'],order = df[df["시도"]=='강원도']["시군구"].value_counts().index)
-            st.pyplot(fig)
+#         with tab9:
+#             st.header("강원도 - 시군구별 전화사기 건수")
+#             fig = plt.figure(figsize=(10, 10))
+#             sns.countplot(y="시군구", data=df[df["시도"]=='강원도'],order = df[df["시도"]=='강원도']["시군구"].value_counts().index)
+#             st.pyplot(fig)
 
 
-    with con4:
-        empty()
+#     with con4:
+#         empty()
         
         
-    with con5:
-        empty()
+#     with con5:
+#         empty()
         
-    with con6:
-        empty()
+#     with con6:
+#         empty()
 
 
-    with con7:
-        empty()
+#     with con7:
+#         empty()
         
 
-    with empty2:
-        empty()
+#     with empty2:
+#         empty()
         
 
 
