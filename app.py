@@ -11,7 +11,7 @@ import seaborn as sns               ##https://altair-viz.github.io/
 from glob import glob
 import koreanize_matplotlib
 import time
-from PIL import Image
+# from PIL import Image
 
 
 
