@@ -4,3 +4,5 @@ pandas
 seaborn
 koreanize_matplotlib
 matplotlib
+tkinter
+pyparsing
